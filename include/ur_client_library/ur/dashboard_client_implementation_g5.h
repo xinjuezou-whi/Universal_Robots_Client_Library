@@ -50,7 +50,7 @@ public:
   DashboardClientImplG5() = delete;
   DashboardClientImplG5(const std::string& host);
 
-  ~DashboardClientImplG5() override = default;
+  ~DashboardClientImplG5() override;
 
   static constexpr int DASHBOARD_SERVER_PORT = 29999;
 

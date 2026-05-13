@@ -150,6 +150,12 @@ std::unordered_map<std::string, DashboardCommandG5> DashboardClientImplG5::g_com
 DashboardClientImplG5::DashboardClientImplG5(const std::string& host) : DashboardClientImpl(host)
 {
 }
+DashboardClientImplG5::~DashboardClientImplG5()
+{
+  commandStop();
+  commandPowerOff();
+  disconnect();
+}
 bool DashboardClientImplG5::send(const std::string& text)
 {
   size_t len = text.size();
